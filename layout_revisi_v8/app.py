@@ -4,8 +4,6 @@ app.py - Tampilan web (Streamlit) untuk Software Optimasi Layout Kabin Crew Kapa
 Jalankan lokal :  streamlit run app.py
 """
 
-import json
-
 import streamlit as st
 
 from constants import FURNITURE_STANDAR_M
@@ -140,6 +138,6 @@ if hasil:
                     use_container_width=True, hide_index=True,
                 )
 
-       if st.session_state.get("png"):
+        if st.session_state.get("png"):
             st.subheader("Unduh hasil")
             st.download_button("⬇️ Gambar layout (PNG)", st.session_state["png"], "hasil_layout.png", "image/png")
